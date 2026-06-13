@@ -534,7 +534,7 @@
         <h1>Prathap KM's Current Affairs Directory</h1>
         <p class="subhead">A colorful seven-day reading board that brings the news into the page first, with source links ready when he wants to go deeper.</p>
         <div class="hero-actions" aria-label="Page actions">
-          <a class="action primary" href="{{ actions_url }}" target="_blank" rel="noopener">Refresh digest</a>
+          <button class="action primary" id="refreshPage" type="button">Check latest</button>
           <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle dark mode">Dark</button>
           <a class="action" href="#source-status">Sources</a>
         </div>
@@ -636,6 +636,10 @@
       root.dataset.theme = next;
       localStorage.setItem("theme", next);
       syncThemeLabel();
+    });
+
+    document.getElementById("refreshPage").addEventListener("click", () => {
+      window.location.reload();
     });
 
     const searchBox = document.getElementById("searchBox");
