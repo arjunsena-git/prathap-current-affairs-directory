@@ -10,6 +10,7 @@ import logging
 import os
 import re
 import sys
+import warnings
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -20,7 +21,7 @@ from urllib.robotparser import RobotFileParser
 
 import feedparser
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 IST = timezone(timedelta(hours=5, minutes=30), "IST")
@@ -33,6 +34,7 @@ USER_AGENT = "KAS-UPSC-Current-Affairs-Bot/1.0 (+https://github.com/)"
 MAX_ITEMS_PER_SOURCE = 12
 KEEP_DAYS = 7
 HTTP_TIMEOUT = (8, 12)
+warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 
 @dataclass(frozen=True)
@@ -47,6 +49,7 @@ SOURCES = [
     Source("PIB", "https://pib.gov.in/rssfeed", "rss", "National"),
     Source("DD News", "https://ddnews.gov.in/rss", "rss", "National"),
     Source("The Hindu", "https://www.thehindu.com/news/national/feeder/default.rss", "rss", "National"),
+    Source("The Hindu Karnataka", "https://www.thehindu.com/news/national/karnataka/feeder/default.rss", "rss", "Karnataka/State"),
     Source("GKToday", "https://www.gktoday.in/current-affairs/", "html", "National"),
     Source("KPSC", "https://kpsc.kar.nic.in/", "html", "Karnataka/State"),
     Source("Karnataka DIPR", "https://karnatakavarthe.org/en/", "html", "Karnataka/State"),

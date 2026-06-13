@@ -532,7 +532,7 @@
       <div class="hero-main">
         <span class="eyebrow">KAS + UPSC current affairs desk</span>
         <h1>Prathap KM's Current Affairs Directory</h1>
-        <p class="subhead">A colorful seven-day reading board that refreshes through the day, bringing the news into the page first with source links ready when he wants to go deeper.</p>
+        <p class="subhead">A colorful latest-7-days reading board that refreshes through the day. The year-to-date archive is kept separately for PDF download.</p>
         <div class="hero-actions" aria-label="Page actions">
           <button class="action primary" id="refreshPage" type="button">Reload latest published</button>
           <a class="action" href="year-to-date.html">Year-to-date PDF</a>
@@ -544,7 +544,7 @@
       <section class="stats" aria-label="Digest status">
         <div class="stat blue">
           <strong>{{ item_count }}</strong>
-          <span>fresh study cards</span>
+          <span>latest 7-day cards</span>
         </div>
         <div class="stat green">
           <strong>7</strong>
@@ -606,13 +606,15 @@
     {% endfor %}
 
     <details class="source-box" id="source-status">
-      <summary>Source status and update log</summary>
+      <summary>Active source status</summary>
       <ul class="source-list">
         {% for name, status in source_status.items() %}
+        {% if status.count > 0 %}
         <li>
           <span><a href="{{ status.url }}" target="_blank" rel="noopener">{{ name }}</a></span>
           <span>{% if status.ok %}OK, {{ status.count }} fetched{% else %}Unavailable, {{ status.count }} cached{% endif %}</span>
         </li>
+        {% endif %}
         {% endfor %}
       </ul>
     </details>
