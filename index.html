@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f7fb">
+  <meta name="description" content="Daily current affairs directory for KAS and UPSC preparation.">
+  <title>Prathap KM's Current Affairs Directory</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f7fb;
+      --paper: #fffaf1;
+      --surface: #ffffff;
+      --surface-soft: #eef6ff;
+      --text: #17202a;
+      --muted: #5e6978;
+      --line: #d8e0ea;
+      --ink: #102131;
+      --blue: #246bfe;
+      --green: #05815f;
+      --yellow: #d58b00;
+      --red: #ca3f55;
+      --violet: #7451d9;
+      --teal: #007c89;
+      --shadow: 0 16px 40px rgba(16, 33, 49, 0.12);
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #10161d;
+      --paper: #1c2027;
+      --surface: #171f28;
+      --surface-soft: #1d2a35;
+      --text: #f4f7fb;
+      --muted: #aeb8c5;
+      --line: #2d3a46;
+      --ink: #f4f7fb;
+      --blue: #7aa7ff;
+      --green: #65d7b3;
+      --yellow: #ffc266;
+      --red: #ff8c9b;
+      --violet: #b4a0ff;
+      --teal: #70dce7;
+      --shadow: 0 16px 40px rgba(0, 0, 0, 0.34);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(90deg, rgba(36, 107, 254, 0.08), transparent 26%, rgba(5, 129, 95, 0.09) 62%, transparent),
+        var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .page {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      padding: 14px 12px 44px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 18px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(36, 107, 254, 0.14), rgba(255, 255, 255, 0) 42%),
+        linear-gradient(315deg, rgba(213, 139, 0, 0.18), rgba(255, 255, 255, 0) 46%),
+        var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      display: grid;
+      gap: 12px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 0.72rem;
+      font-weight: 850;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 12ch;
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(2.1rem, 12vw, 5rem);
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    .subhead {
+      max-width: 62ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .action,
+    .theme-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .action.primary {
+      border-color: transparent;
+      background: var(--blue);
+      color: #ffffff;
+    }
+
+    .theme-button {
+      min-width: 72px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .stat {
+      min-height: 90px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--surface) 84%, var(--surface-soft));
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .stat.blue {
+      border-top: 5px solid var(--blue);
+    }
+
+    .stat.green {
+      border-top: 5px solid var(--green);
+    }
+
+    .stat.yellow {
+      border-top: 5px solid var(--yellow);
+    }
+
+    .stat.red {
+      border-top: 5px solid var(--red);
+    }
+
+    .desk {
+      display: grid;
+      gap: 12px;
+      margin: 16px 0;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 10px 26px rgba(16, 33, 49, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .search {
+      width: 100%;
+      min-height: 46px;
+      padding: 0 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface-soft);
+      color: var(--text);
+      outline: none;
+    }
+
+    .search:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 18%, transparent);
+    }
+
+    .chips {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: thin;
+    }
+
+    .chip {
+      flex: 0 0 auto;
+      min-height: 38px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 850;
+      cursor: pointer;
+    }
+
+    .chip.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: transparent;
+    }
+
+    .section {
+      margin: 22px 0 34px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 1.35rem;
+      letter-spacing: 0;
+    }
+
+    .section-count {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .cards {
+      display: grid;
+      gap: 12px;
+    }
+
+    .card {
+      display: grid;
+      gap: 10px;
+      min-height: 240px;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 10px 22px rgba(16, 33, 49, 0.08);
+      border-top-width: 6px;
+    }
+
+    .card[data-category="National"] {
+      border-top-color: var(--blue);
+    }
+
+    .card[data-category="Karnataka/State"] {
+      border-top-color: var(--red);
+    }
+
+    .card[data-category="Economy"] {
+      border-top-color: var(--green);
+    }
+
+    .card[data-category="Science & Tech"] {
+      border-top-color: var(--violet);
+    }
+
+    .card[data-category="Environment"] {
+      border-top-color: var(--teal);
+    }
+
+    .card[data-category="International"] {
+      border-top-color: var(--yellow);
+    }
+
+    .card-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      min-height: 27px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 850;
+    }
+
+    .badge.source {
+      color: var(--ink);
+    }
+
+    .badge.warning {
+      border-color: color-mix(in srgb, var(--red) 55%, var(--line));
+      color: var(--red);
+    }
+
+    .card h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 1.08rem;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
+
+    .brief {
+      margin: 0;
+      color: var(--text);
+      font-size: 0.98rem;
+    }
+
+    .exam-lens {
+      margin: 0;
+      padding: 10px 11px;
+      border-left: 4px solid var(--yellow);
+      border-radius: 0 8px 8px 0;
+      background: color-mix(in srgb, var(--yellow) 13%, var(--surface));
+      color: var(--muted);
+      font-size: 0.91rem;
+      font-weight: 650;
+    }
+
+    .card-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .read-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 11px;
+      border-radius: 8px;
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 0.86rem;
+      font-weight: 850;
+    }
+
+    .read-link:hover {
+      color: var(--paper);
+    }
+
+    .save-note {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 750;
+      text-align: right;
+    }
+
+    .empty {
+      padding: 16px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      background: var(--surface);
+    }
+
+    .no-results {
+      display: none;
+      margin: 20px 0;
+      padding: 18px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .source-box {
+      margin-top: 28px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .source-box summary {
+      cursor: pointer;
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .source-list {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .source-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .source-list li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .footer {
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      text-align: center;
+    }
+
+    @media (min-width: 720px) {
+      .page {
+        padding: 24px 22px 58px;
+      }
+
+      .hero {
+        grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+        align-items: stretch;
+        padding: 26px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .desk {
+        grid-template-columns: minmax(240px, 0.55fr) minmax(0, 1fr);
+        align-items: center;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1020px) {
+      .cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .action.primary {
+        grid-column: 1 / -1;
+      }
+
+      h1 {
+        max-width: 10ch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="hero-main">
+        <span class="eyebrow">KAS + UPSC daily study desk</span>
+        <h1>Prathap KM's Current Affairs Directory</h1>
+        <p class="subhead">A colorful seven-day reading board that brings the news into the page first, with source links ready when he wants to go deeper.</p>
+        <div class="hero-actions" aria-label="Page actions">
+          <a class="action primary" href="https://github.com/arjunsena-git/prathap-current-affairs-directory/actions/workflows/update-current-affairs.yml" target="_blank" rel="noopener">Refresh digest</a>
+          <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle dark mode">Dark</button>
+          <a class="action" href="#source-status">Sources</a>
+        </div>
+      </div>
+
+      <section class="stats" aria-label="Digest status">
+        <div class="stat blue">
+          <strong>13</strong>
+          <span>fresh study cards</span>
+        </div>
+        <div class="stat green">
+          <strong>7</strong>
+          <span>days visible</span>
+        </div>
+        <div class="stat yellow">
+          <strong>6</strong>
+          <span>exam sections</span>
+        </div>
+        <div class="stat red">
+          <strong>13 Jun 2026</strong>
+          <span>last update date</span>
+        </div>
+      </section>
+    </header>
+
+    <section class="desk" aria-label="Study filters">
+      <input class="search" id="searchBox" type="search" placeholder="Search headlines, summaries, sources" autocomplete="off">
+      <div class="chips" aria-label="Category filters">
+        <button class="chip active" type="button" data-filter="All">All</button>
+        
+        <button class="chip" type="button" data-filter="National">National</button>
+        
+        <button class="chip" type="button" data-filter="Karnataka/State">Karnataka/State</button>
+        
+        <button class="chip" type="button" data-filter="Economy">Economy</button>
+        
+        <button class="chip" type="button" data-filter="Science & Tech">Science & Tech</button>
+        
+        <button class="chip" type="button" data-filter="Environment">Environment</button>
+        
+        <button class="chip" type="button" data-filter="International">International</button>
+        
+      </div>
+    </section>
+
+    <div class="no-results" id="noResults">No cards match this search yet.</div>
+
+    
+    
+    <section class="section" data-section="National" id="national">
+      <div class="section-head">
+        <h2>National</h2>
+        <span class="section-count">4 cards</span>
+      </div>
+      <div class="cards">
+        
+        <article class="card" data-category="National" data-search="महाराष्ट्र महिला किसान सशक्तिकरण विधेयक 2026 से महिलाओं को मिलेगी स्वतंत्र किसान पहचान महाराष्ट्र महिला किसान सशक्तिकरण विधेयक 2026 से महिलाओं को मिलेगी स्वतंत्र किसान पहचान gktoday national">
+          <div class="card-top">
+            <span class="badge source">GKToday</span>
+            <time class="badge" datetime="2026-06-13T13:56:22.287566+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>महाराष्ट्र महिला किसान सशक्तिकरण विधेयक 2026 से महिलाओं को मिलेगी स्वतंत्र किसान पहचान</h3>
+          <p class="brief">महाराष्ट्र महिला किसान सशक्तिकरण विधेयक 2026 से महिलाओं को मिलेगी स्वतंत्र किसान पहचान</p>
+          <p class="exam-lens">Exam lens: place this under National and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.gktoday.in/hindi/%e0%a4%ae%e0%a4%b9%e0%a4%be%e0%a4%b0%e0%a4%be%e0%a4%b7%e0%a5%8d%e0%a4%9f%e0%a5%8d%e0%a4%b0-%e0%a4%ae%e0%a4%b9%e0%a4%bf%e0%a4%b2%e0%a4%be-%e0%a4%95%e0%a4%bf%e0%a4%b8%e0%a4%be%e0%a4%a8-%e0%a4%b8/" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+        <article class="card" data-category="National" data-search="fifa 2026: kerala startup designs football-inspired fonts fontspell, a startup based in kozhikode, launches fonts that capture the energy, culture and spirit of football the hindu national">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:29:59+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>FIFA 2026: Kerala startup designs football-inspired fonts</h3>
+          <p class="brief">Fontspell, a startup based in Kozhikode, launches fonts that capture the energy, culture and spirit of football</p>
+          <p class="exam-lens">Exam lens: place this under National and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/life-and-style/fifa-2026-kerala-startup-designs-football-inspired-fonts/article71092676.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+        <article class="card" data-category="National" data-search="bkc public transport day: tepid response as commuters ask for efficient last mile connectivity the buses and autos are the only modes of transport that provide last-mile connectivity, but it becomes a hassle due to traffic congestion and the high fares of autorickshaws the hindu national">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:27:44+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>BKC Public Transport Day: Tepid response as commuters ask for efficient last mile connectivity</h3>
+          <p class="brief">The buses and autos are the only modes of transport that provide last-mile connectivity, but it becomes a hassle due to traffic congestion and the high fares of autorickshaws</p>
+          <p class="exam-lens">Exam lens: place this under National and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/news/cities/mumbai/bkc-public-transport-day-tepid-response-as-commuters-ask-for-efficient-last-mile-connectivity/article71094438.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+        <article class="card" data-category="National" data-search="drdo demonstrates advanced missile defence, anti-ship strike capabilities in three successful flight tests it further mentioned that the multi-layered bmd capability was successfully demonstrated with interceptor missiles engaging and destroying their designated targets. the hindu national">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:09:42+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>DRDO demonstrates advanced missile defence, anti-ship strike capabilities in three successful flight tests</h3>
+          <p class="brief">It further mentioned that the multi-layered BMD capability was successfully demonstrated with interceptor missiles engaging and destroying their designated targets.</p>
+          <p class="exam-lens">Exam lens: place this under National and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/news/national/drdo-demonstrates-advanced-missile-defence-anti-ship-strike-capabilities-in-three-successful-flight-tests/article71096810.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    
+    
+    <section class="section" data-section="Karnataka/State" id="karnataka-state">
+      <div class="section-head">
+        <h2>Karnataka/State</h2>
+        <span class="section-count">2 cards</span>
+      </div>
+      <div class="cards">
+        
+        <article class="card" data-category="Karnataka/State" data-search="maati helps women artists from bihar to look beyond art maati, short for mithila art artisan transformative initiative, works with women artisans from madhubhani and darbhanga in bihar. four women artisans showcased their works in bengaluru, ranging from textile to wall art the hindu karnataka/state">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:27:31+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>MAATI helps women artists from Bihar to look beyond art</h3>
+          <p class="brief">MAATI, short for Mithila Art Artisan Transformative Initiative, works with women artisans from Madhubhani and Darbhanga in Bihar. Four women artisans showcased their works in Bengaluru, ranging from textile to wall art</p>
+          <p class="exam-lens">Exam lens: place this under Karnataka/State and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/news/cities/bangalore/maati-helps-women-artists-from-bihar-to-look-beyond-art/article71079607.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+        <article class="card" data-category="Karnataka/State" data-search="two nursing students killed in road accident the deceased have been identified as atul and gaurishankar, both nursing students pursuing their studies in bengaluru the hindu karnataka/state">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:27:06+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>Two nursing students killed in road accident</h3>
+          <p class="brief">The deceased have been identified as Atul and Gaurishankar, both nursing students pursuing their studies in Bengaluru</p>
+          <p class="exam-lens">Exam lens: place this under Karnataka/State and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/news/national/karnataka/two-nursing-students-killed-in-road-accident/article71096624.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    
+    
+    <section class="section" data-section="Economy" id="economy">
+      <div class="section-head">
+        <h2>Economy</h2>
+        <span class="section-count">0 cards</span>
+      </div>
+      <div class="cards">
+        
+        <div class="empty">No fresh cards in this section yet.</div>
+        
+      </div>
+    </section>
+    
+    
+    <section class="section" data-section="Science & Tech" id="science-and-tech">
+      <div class="section-head">
+        <h2>Science & Tech</h2>
+        <span class="section-count">6 cards</span>
+      </div>
+      <div class="cards">
+        
+        <article class="card" data-category="Science & Tech" data-search="bihar encounter: man killed, two police personnel injured “the injured policemen are undergoing treatment at patna aiims, and their condition was stated to be out of danger,” an officer said the hindu science & tech">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:41:16+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>Bihar encounter: Man killed, two police personnel injured</h3>
+          <p class="brief">“The injured policemen are undergoing treatment at Patna AIIMS, and their condition was stated to be out of danger,” an officer said</p>
+          <p class="exam-lens">Exam lens: place this under Science & Tech and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/news/national/bihar/bihar-encounter-man-killed-two-police-personnel-injured/article71096943.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+        <article class="card" data-category="Science & Tech" data-search="iaf aircraft an-32 crashes while landing in assam's jorhat a court of inquiry is being constituted to ascertain the cause of the accident, the iaf says the hindu science & tech">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:34:48+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>IAF aircraft AN-32 crashes while landing in Assam's Jorhat</h3>
+          <p class="brief">A court of inquiry is being constituted to ascertain the cause of the accident, the IAF says</p>
+          <p class="exam-lens">Exam lens: place this under Science & Tech and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/news/national/assam/iaf-aircraft-an-32-crashes-while-landing-in-assams-jorhat/article71096781.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+        <article class="card" data-category="Science & Tech" data-search="monsoon 2026 live: centre suspends cell broadcasting services, a mobile-based disaster warning system cell broadcast service is being kept on hold until further instructions due to certain issues flagged by the competent authorities, reads an order by national disaster management authority (ndma) the hindu science & tech">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:26:08+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>Monsoon 2026 LIVE: Centre suspends Cell Broadcasting Services, a mobile-based disaster warning system</h3>
+          <p class="brief">Cell Broadcast Service is being kept on hold until further instructions due to certain issues flagged by the competent authorities, reads an order by National Disaster Management Authority (NDMA)</p>
+          <p class="exam-lens">Exam lens: place this under Science & Tech and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/news/national/monsoon-india-rain-weather-tracker-live-updates-imd-forecast-kerala-delhi-tamil-nadu-west-bengal-maharashtra-june-13-2026/article71096436.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+        <article class="card" data-category="Science & Tech" data-search="centre suspends cell broadcasting services an order issued by the national disaster management authority (ndma) on june 12 stated that, due to certain issues flagged by the competent authorities, the cell broadcast service is being kept on hold until further instructions the hindu science & tech">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:12:55+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>Centre suspends Cell Broadcasting Services</h3>
+          <p class="brief">An order issued by the National Disaster Management Authority (NDMA) on June 12 stated that, due to certain issues flagged by the competent authorities, the Cell Broadcast Service is being kept on hold until further instructions</p>
+          <p class="exam-lens">Exam lens: place this under Science & Tech and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/news/national/centre-suspends-cell-broadcasting-services/article71096691.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+        <article class="card" data-category="Science & Tech" data-search="friend of deceased arrested in medical college death case in tripura an official communiqué said west tripura district magistrate would conduct the inquiry and submit a report to the state government the hindu science & tech">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:11:06+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>Friend of deceased arrested in medical college death case in Tripura</h3>
+          <p class="brief">An official communiqué said West Tripura District Magistrate would conduct the inquiry and submit a report to the State government</p>
+          <p class="exam-lens">Exam lens: place this under Science & Tech and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/news/national/tripura/friendofdeceasedarrestedinmedicalcollegedeathcaseintripura/article71096970.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+        <article class="card" data-category="Science & Tech" data-search="hc denies bail to 3 juveniles in sexual assault case, notes blind victim identified them by voice the case came to light after the chairman of the karnal child welfare committee filed a complaint stating he had visited ansal town for work, where he saw a girl child who appeared to be pregnant the hindu science & tech">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:10:57+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>HC denies bail to 3 juveniles in sexual assault case, notes blind victim identified them by voice</h3>
+          <p class="brief">The case came to light after the chairman of the Karnal Child Welfare Committee filed a complaint stating he had visited Ansal Town for work, where he saw a girl child who appeared to be pregnant</p>
+          <p class="exam-lens">Exam lens: place this under Science & Tech and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/news/national/haryana/hc-denies-bail-to-3-juveniles-in-sexual-assault-case-notes-blind-victim-identified-them-by-voice/article71096916.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    
+    
+    <section class="section" data-section="Environment" id="environment">
+      <div class="section-head">
+        <h2>Environment</h2>
+        <span class="section-count">0 cards</span>
+      </div>
+      <div class="cards">
+        
+        <div class="empty">No fresh cards in this section yet.</div>
+        
+      </div>
+    </section>
+    
+    
+    <section class="section" data-section="International" id="international">
+      <div class="section-head">
+        <h2>International</h2>
+        <span class="section-count">1 cards</span>
+      </div>
+      <div class="cards">
+        
+        <article class="card" data-category="International" data-search="chellanam, a village near kochi, celebrates messi with 25-foot cutout ahead of the fifa world cup placing the cutout of messi at chellanam has become something of a world cup tradition in the coastal village near kochi the hindu international">
+          <div class="card-top">
+            <span class="badge source">The Hindu</span>
+            <time class="badge" datetime="2026-06-13T13:29:19+05:30">13 Jun 2026</time>
+            
+          </div>
+          <h3>Chellanam, a village near Kochi, celebrates Messi with 25-foot cutout ahead of the FIFA World Cup</h3>
+          <p class="brief">Placing the cutout of Messi at Chellanam has become something of a World Cup tradition in the coastal village near Kochi</p>
+          <p class="exam-lens">Exam lens: place this under International and connect it with polity, governance, economy, geography, science, or environment notes where relevant.</p>
+          <div class="card-actions">
+            <a class="read-link" href="https://www.thehindu.com/life-and-style/chellanam-a-village-near-kochi-celebrates-messi-with-25-foot-cutout-ahead-of-the-fifa-world-cup/article71084345.ece" target="_blank" rel="noopener">Read source</a>
+            <span class="save-note">Revise, then make one note</span>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+    
+
+    <details class="source-box" id="source-status">
+      <summary>Source status and update log</summary>
+      <ul class="source-list">
+        
+        <li>
+          <span><a href="https://pib.gov.in/rssfeed" target="_blank" rel="noopener">PIB</a></span>
+          <span>Unavailable, 0 cached</span>
+        </li>
+        
+        <li>
+          <span><a href="https://ddnews.gov.in/rss" target="_blank" rel="noopener">DD News</a></span>
+          <span>Unavailable, 0 cached</span>
+        </li>
+        
+        <li>
+          <span><a href="https://www.thehindu.com/news/national/feeder/default.rss" target="_blank" rel="noopener">The Hindu</a></span>
+          <span>OK, 12 fetched</span>
+        </li>
+        
+        <li>
+          <span><a href="https://www.gktoday.in/current-affairs/" target="_blank" rel="noopener">GKToday</a></span>
+          <span>OK, 5 fetched</span>
+        </li>
+        
+        <li>
+          <span><a href="https://kpsc.kar.nic.in/" target="_blank" rel="noopener">KPSC</a></span>
+          <span>Unavailable, 0 cached</span>
+        </li>
+        
+        <li>
+          <span><a href="https://karnatakavarthe.org/en/" target="_blank" rel="noopener">Karnataka DIPR</a></span>
+          <span>Unavailable, 0 cached</span>
+        </li>
+        
+      </ul>
+    </details>
+
+    <p class="footer">Last updated: 13 Jun 2026, 01:56 PM IST. Static GitHub Pages site, no login, no backend, no paid APIs.</p>
+  </main>
+
+  <script>
+    const root = document.documentElement;
+    const storedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = storedTheme || (prefersDark ? "dark" : "light");
+
+    const themeToggle = document.getElementById("themeToggle");
+    const syncThemeLabel = () => {
+      themeToggle.textContent = root.dataset.theme === "dark" ? "Light" : "Dark";
+    };
+    syncThemeLabel();
+
+    themeToggle.addEventListener("click", () => {
+      const next = root.dataset.theme === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      localStorage.setItem("theme", next);
+      syncThemeLabel();
+    });
+
+    const searchBox = document.getElementById("searchBox");
+    const chips = Array.from(document.querySelectorAll(".chip"));
+    const cards = Array.from(document.querySelectorAll(".card"));
+    const sections = Array.from(document.querySelectorAll(".section"));
+    const noResults = document.getElementById("noResults");
+    let activeFilter = "All";
+
+    function applyFilters() {
+      const query = searchBox.value.trim().toLowerCase();
+      let visibleCards = 0;
+
+      cards.forEach((card) => {
+        const matchesCategory = activeFilter === "All" || card.dataset.category === activeFilter;
+        const matchesSearch = !query || card.dataset.search.includes(query);
+        const visible = matchesCategory && matchesSearch;
+        card.hidden = !visible;
+        if (visible) {
+          visibleCards += 1;
+        }
+      });
+
+      sections.forEach((section) => {
+        const visibleInSection = section.querySelectorAll(".card:not([hidden])").length;
+        section.hidden = visibleInSection === 0 && (activeFilter !== section.dataset.section || query);
+      });
+
+      noResults.style.display = visibleCards === 0 ? "block" : "none";
+    }
+
+    chips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        activeFilter = chip.dataset.filter;
+        chips.forEach((item) => item.classList.toggle("active", item === chip));
+        applyFilters();
+      });
+    });
+
+    searchBox.addEventListener("input", applyFilters);
+  </script>
+</body>
+</html>
