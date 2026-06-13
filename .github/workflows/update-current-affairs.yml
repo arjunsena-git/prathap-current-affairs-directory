@@ -2,8 +2,9 @@ name: Update current affairs
 
 on:
   schedule:
-    # 00:30 UTC = 06:00 IST
-    - cron: "30 0 * * *"
+    # Every 2 hours from 06:00 to 22:00 IST.
+    # GitHub cron uses UTC, so these are 00:30 through 16:30 UTC.
+    - cron: "30 0,2,4,6,8,10,12,14,16 * * *"
   workflow_dispatch:
 
 permissions:

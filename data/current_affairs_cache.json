@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-13T14:15:31.356832+05:30",
+  "last_updated": "2026-06-13T14:44:10.097758+05:30",
   "items": [
     {
       "id": "aee655773d856fb0",
@@ -7,9 +7,86 @@
       "summary": "महाराष्ट्र महिला किसान सशक्तिकरण विधेयक 2026 से महिलाओं को मिलेगी स्वतंत्र किसान पहचान",
       "source": "GKToday",
       "link": "https://www.gktoday.in/hindi/%e0%a4%ae%e0%a4%b9%e0%a4%be%e0%a4%b0%e0%a4%be%e0%a4%b7%e0%a5%8d%e0%a4%9f%e0%a5%8d%e0%a4%b0-%e0%a4%ae%e0%a4%b9%e0%a4%bf%e0%a4%b2%e0%a4%be-%e0%a4%95%e0%a4%bf%e0%a4%b8%e0%a4%be%e0%a4%a8-%e0%a4%b8/",
-      "date": "2026-06-13T14:15:01.728883+05:30",
+      "date": "2026-06-13T14:43:39.844205+05:30",
       "date_label": "13 Jun 2026",
       "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "303fff35a5993a82",
+      "title": "DRDO demonstrates advanced missile defence, anti-ship strike capabilities in three successful flight tests",
+      "summary": "It further mentioned that the multi-layered BMD capability was successfully demonstrated with interceptor missiles engaging and destroying their designated targets.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/drdo-demonstrates-advanced-missile-defence-anti-ship-strike-capabilities-in-three-successful-flight-tests/article71096810.ece",
+      "date": "2026-06-13T14:39:11+05:30",
+      "date_label": "13 Jun 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "c30e2cd23a5f3fc9",
+      "title": "Production of reserved handloom items in powerlooms to invite penalties",
+      "summary": "Eleven categories of products, including cotton and silk sarees with border designs, dhotis, towels, lungis, bed sheets, dress materials, jamakkalams, blankets, shawls, and woollen tweeds, have been reserved exclusively for handloom...",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/tamil-nadu/production-of-reservedhandloomitemsin-powerlooms-to-invite-penalties/article71097044.ece",
+      "date": "2026-06-13T14:35:31+05:30",
+      "date_label": "13 Jun 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "809ea5e451dc016c",
+      "title": "Kerala’s fiscal status report: Its politics and economics",
+      "summary": "The report places considerable emphasis on Kerala’s outstanding liabilities. But the rising debt was largely a product of the Covid-19 pandemic, when the State made full use of the higher borrowing limit allowed by the Union",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/kerala/keralas-fiscal-status-report-its-politics-and-economics/article71097112.ece",
+      "date": "2026-06-13T14:32:44+05:30",
+      "date_label": "13 Jun 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "49d1e3603cb00690",
+      "title": "Monsoon 2026 LIVE: Centre suspends Cell Broadcasting Services, a mobile-based disaster warning system",
+      "summary": "Cell Broadcast Service is being kept on hold until further instructions due to certain issues flagged by the competent authorities, reads an order by National Disaster Management Authority (NDMA)",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/monsoon-india-rain-weather-tracker-live-updates-imd-forecast-kerala-delhi-tamil-nadu-west-bengal-maharashtra-june-13-2026/article71096436.ece",
+      "date": "2026-06-13T14:20:33+05:30",
+      "date_label": "13 Jun 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
+    {
+      "id": "ecc7a5a98bdaf312",
+      "title": "West Bengal CM Adhikari holds Janata Darbar, listens to people’s grievances",
+      "summary": "The first 'janata darbar' was held on May 18. Mr. Adhikari had announced the weekly programme after taking charge as Chief Minister, saying citizens would be able to meet him directly every week",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/west-bengal/west-bengal-cm-suvendu-adhikari-janata-darbar-on-june-13-2026/article71097066.ece",
+      "date": "2026-06-13T14:15:05+05:30",
+      "date_label": "13 Jun 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "6b37d359f63b94f4",
+      "title": "2020 Delhi riots: Sharjeel Imam, Umar Khalid move fresh bail pleas in ‘larger conspiracy’ case",
+      "summary": "The applications argued that there has been no significant progress in the trial despite the Supreme Court dismissing the earlier plea over six months ago",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/2020-delhi-riots-sharjeel-imam-umar-khalid-move-fresh-bail-pleas-in-larger-conspiracy-case/article71097050.ece",
+      "date": "2026-06-13T14:14:28+05:30",
+      "date_label": "13 Jun 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
+    {
+      "id": "046e66e2dc569110",
+      "title": "ED complaint leads to UAPA case against those associated with U.S.-based Christian missionary",
+      "summary": "The FIR was registered based on a complaint submitted by Sunil Kumar Sinhmar, an officer of the Directorate of Enforcement",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/karnataka/ed-complaint-leads-to-uapa-case-against-those-associated-with-us-based-christian-missionary/article71096583.ece",
+      "date": "2026-06-13T14:09:32+05:30",
+      "date_label": "13 Jun 2026",
+      "category": "Science & Tech",
       "unavailable": false
     },
     {
@@ -19,17 +96,6 @@
       "source": "The Hindu",
       "link": "https://www.thehindu.com/news/cities/Coimbatore/dmk-government-failed-to-strengthen-power-infrastructure-says-sengottaiyan/article71094637.ece",
       "date": "2026-06-13T14:06:51+05:30",
-      "date_label": "13 Jun 2026",
-      "category": "Science & Tech",
-      "unavailable": false
-    },
-    {
-      "id": "49d1e3603cb00690",
-      "title": "Monsoon 2026 LIVE: Centre suspends Cell Broadcasting Services, a mobile-based disaster warning system",
-      "summary": "Cell Broadcast Service is being kept on hold until further instructions due to certain issues flagged by the competent authorities, reads an order by National Disaster Management Authority (NDMA)",
-      "source": "The Hindu",
-      "link": "https://www.thehindu.com/news/national/monsoon-india-rain-weather-tracker-live-updates-imd-forecast-kerala-delhi-tamil-nadu-west-bengal-maharashtra-june-13-2026/article71096436.ece",
-      "date": "2026-06-13T14:06:22+05:30",
       "date_label": "13 Jun 2026",
       "category": "Science & Tech",
       "unavailable": false
@@ -77,72 +143,6 @@
       "date_label": "13 Jun 2026",
       "category": "Science & Tech",
       "unavailable": false
-    },
-    {
-      "id": "573cb24052d5eb2a",
-      "title": "IAF aircraft AN-32 crashes while landing in Assam's Jorhat",
-      "summary": "A court of inquiry is being constituted to ascertain the cause of the accident, the IAF says",
-      "source": "The Hindu",
-      "link": "https://www.thehindu.com/news/national/assam/iaf-aircraft-an-32-crashes-while-landing-in-assams-jorhat/article71096781.ece",
-      "date": "2026-06-13T13:34:48+05:30",
-      "date_label": "13 Jun 2026",
-      "category": "Science & Tech",
-      "unavailable": false
-    },
-    {
-      "id": "a1e592159cc66e97",
-      "title": "FIFA 2026: Kerala startup designs football-inspired fonts",
-      "summary": "Fontspell, a startup based in Kozhikode, launches fonts that capture the energy, culture and spirit of football",
-      "source": "The Hindu",
-      "link": "https://www.thehindu.com/life-and-style/fifa-2026-kerala-startup-designs-football-inspired-fonts/article71092676.ece",
-      "date": "2026-06-13T13:29:59+05:30",
-      "date_label": "13 Jun 2026",
-      "category": "National",
-      "unavailable": false
-    },
-    {
-      "id": "c1256e01247db31d",
-      "title": "Chellanam, a village near Kochi, celebrates Messi with 25-foot cutout ahead of the FIFA World Cup",
-      "summary": "Placing the cutout of Messi at Chellanam has become something of a World Cup tradition in the coastal village near Kochi",
-      "source": "The Hindu",
-      "link": "https://www.thehindu.com/life-and-style/chellanam-a-village-near-kochi-celebrates-messi-with-25-foot-cutout-ahead-of-the-fifa-world-cup/article71084345.ece",
-      "date": "2026-06-13T13:29:19+05:30",
-      "date_label": "13 Jun 2026",
-      "category": "International",
-      "unavailable": false
-    },
-    {
-      "id": "fcb3868040c35c79",
-      "title": "BKC Public Transport Day: Tepid response as commuters ask for efficient last mile connectivity",
-      "summary": "The buses and autos are the only modes of transport that provide last-mile connectivity, but it becomes a hassle due to traffic congestion and the high fares of autorickshaws",
-      "source": "The Hindu",
-      "link": "https://www.thehindu.com/news/cities/mumbai/bkc-public-transport-day-tepid-response-as-commuters-ask-for-efficient-last-mile-connectivity/article71094438.ece",
-      "date": "2026-06-13T13:27:44+05:30",
-      "date_label": "13 Jun 2026",
-      "category": "National",
-      "unavailable": false
-    },
-    {
-      "id": "1d90374a5e5b9e18",
-      "title": "MAATI helps women artists from Bihar to look beyond art",
-      "summary": "MAATI, short for Mithila Art Artisan Transformative Initiative, works with women artisans from Madhubhani and Darbhanga in Bihar. Four women artisans showcased their works in Bengaluru, ranging from textile to wall art",
-      "source": "The Hindu",
-      "link": "https://www.thehindu.com/news/cities/bangalore/maati-helps-women-artists-from-bihar-to-look-beyond-art/article71079607.ece",
-      "date": "2026-06-13T13:27:31+05:30",
-      "date_label": "13 Jun 2026",
-      "category": "Karnataka/State",
-      "unavailable": false
-    },
-    {
-      "id": "340ebfc6002aeca3",
-      "title": "Two nursing students killed in road accident",
-      "summary": "The deceased have been identified as Atul and Gaurishankar, both nursing students pursuing their studies in Bengaluru",
-      "source": "The Hindu",
-      "link": "https://www.thehindu.com/news/national/karnataka/two-nursing-students-killed-in-road-accident/article71096624.ece",
-      "date": "2026-06-13T13:27:06+05:30",
-      "date_label": "13 Jun 2026",
-      "category": "Karnataka/State",
-      "unavailable": false
     }
   ],
   "sources": {
@@ -156,7 +156,7 @@
       "ok": false,
       "count": 0,
       "url": "https://ddnews.gov.in/rss",
-      "error": "HTTPSConnectionPool(host='ddnews.gov.in', port=443): Read timed out. (read timeout=12)"
+      "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
     },
     "The Hindu": {
       "ok": true,
