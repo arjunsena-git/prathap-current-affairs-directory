@@ -28,6 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE_DIR = ROOT / "templates"
 CACHE_PATH = ROOT / "data" / "current_affairs_cache.json"
 OUTPUT_PATH = ROOT / "index.html"
+REPORT_OUTPUT_PATH = ROOT / "year-to-date.html"
 USER_AGENT = "KAS-UPSC-Current-Affairs-Bot/1.0 (+https://github.com/)"
 MAX_ITEMS_PER_SOURCE = 12
 KEEP_DAYS = 7
@@ -166,8 +167,17 @@ def categorize(title: str, summary: str, default: str) -> str:
 
 
 def item_id(title: str, link: str) -> str:
-    basis = re.sub(r"[^a-z0-9]+", " ", title.lower()).strip() or link
+    basis = title_key(title) or link
     return hashlib.sha1(basis.encode("utf-8")).hexdigest()[:16]
+
+
+def title_key(title: str) -> str:
+    return re.sub(r"[\W_]+", " ", title.casefold(), flags=re.UNICODE).strip()
+
+
+def year_start() -> datetime:
+    current = now_ist()
+    return datetime(current.year, 1, 1, tzinfo=IST)
 
 
 def request_session() -> requests.Session:
@@ -378,14 +388,18 @@ def scrape_sources() -> tuple[list[dict[str, Any]], dict[str, dict[str, Any]]]:
 
 def dedupe_and_filter(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
     cutoff = now_ist() - timedelta(days=KEEP_DAYS)
+    return dedupe_since(items, cutoff, keep_unavailable=True)
+
+
+def dedupe_since(items: list[dict[str, Any]], cutoff: datetime, keep_unavailable: bool = False) -> list[dict[str, Any]]:
     seen: set[str] = set()
     filtered: list[dict[str, Any]] = []
 
     for item in sorted(items, key=lambda row: row.get("date", ""), reverse=True):
-        title_key = re.sub(r"[^a-z0-9]+", " ", item.get("title", "").lower()).strip()
-        if not title_key or title_key in seen:
+        dedupe_key = title_key(item.get("title", "")) or item.get("link", "")
+        if not dedupe_key or dedupe_key in seen:
             continue
-        seen.add(title_key)
+        seen.add(dedupe_key)
 
         try:
             item_date = datetime.fromisoformat(item["date"]).astimezone(IST)
@@ -394,11 +408,25 @@ def dedupe_and_filter(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
             item["date"] = item_date.isoformat()
             item["date_label"] = item_date.strftime("%d %b %Y")
 
-        if item_date < cutoff and not item.get("unavailable"):
+        if item_date < cutoff and not (keep_unavailable and item.get("unavailable")):
             continue
         filtered.append(item)
 
     return filtered
+
+
+def merge_archive(existing: list[dict[str, Any]], incoming: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    merged: dict[str, dict[str, Any]] = {}
+    for item in existing + incoming:
+        key = title_key(item.get("title", "")) or item.get("link", "")
+        if not key:
+            continue
+        current = dict(item)
+        if key in merged and merged[key].get("unavailable") and not current.get("unavailable"):
+            merged[key] = current
+        else:
+            merged.setdefault(key, current)
+    return dedupe_since(list(merged.values()), year_start(), keep_unavailable=False)
 
 
 def group_items(items: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
@@ -424,11 +452,47 @@ def render(items: list[dict[str, Any]], source_status: dict[str, dict[str, Any]]
         categories=CATEGORIES,
         grouped_items=group_items(items),
         item_count=len(items),
+        ytd_count=0,
         source_status=source_status,
         last_updated_iso=updated.isoformat(),
         last_updated_label=updated.strftime("%d %b %Y, %I:%M %p IST"),
         repository_url=repository_url,
         actions_url=f"{repository_url}/actions/workflows/update-current-affairs.yml",
+    )
+
+
+def render_home(items: list[dict[str, Any]], ytd_items: list[dict[str, Any]], source_status: dict[str, dict[str, Any]]) -> str:
+    env = Environment(loader=FileSystemLoader(TEMPLATE_DIR), autoescape=select_autoescape(["html", "xml"]))
+    template = env.get_template("index.html.j2")
+    updated = now_ist()
+    repository_url = repo_url()
+    return template.render(
+        categories=CATEGORIES,
+        grouped_items=group_items(items),
+        item_count=len(items),
+        ytd_count=len(ytd_items),
+        source_status=source_status,
+        last_updated_iso=updated.isoformat(),
+        last_updated_label=updated.strftime("%d %b %Y, %I:%M %p IST"),
+        ytd_start_label=year_start().strftime("%d %b %Y"),
+        repository_url=repository_url,
+        actions_url=f"{repository_url}/actions/workflows/update-current-affairs.yml",
+    )
+
+
+def render_report(items: list[dict[str, Any]], source_status: dict[str, dict[str, Any]]) -> str:
+    env = Environment(loader=FileSystemLoader(TEMPLATE_DIR), autoescape=select_autoescape(["html", "xml"]))
+    template = env.get_template("year-to-date.html.j2")
+    updated = now_ist()
+    return template.render(
+        categories=CATEGORIES,
+        grouped_items=group_items(items),
+        item_count=len(items),
+        source_status=source_status,
+        last_updated_iso=updated.isoformat(),
+        last_updated_label=updated.strftime("%d %b %Y, %I:%M %p IST"),
+        ytd_start_label=year_start().strftime("%d %b %Y"),
+        year=updated.year,
     )
 
 
@@ -447,6 +511,7 @@ def main() -> int:
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", default=str(OUTPUT_PATH), help="HTML file to write")
+    parser.add_argument("--report-output", default=str(REPORT_OUTPUT_PATH), help="Year-to-date report HTML file to write")
     parser.add_argument("--cache", default=str(CACHE_PATH), help="Cache file to write")
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args()
@@ -455,12 +520,16 @@ def main() -> int:
 
     logging.basicConfig(level=logging.INFO if args.verbose else logging.WARNING, format="%(levelname)s: %(message)s")
     logging.getLogger("urllib3.connection").setLevel(logging.ERROR)
-    items, source_status = scrape_sources()
-    items = dedupe_and_filter(items)
-    html = render(items, source_status)
+    scraped_items, source_status = scrape_sources()
+    cache = load_cache()
+    ytd_items = merge_archive(cache.get("items", []), scraped_items)
+    items = dedupe_and_filter(ytd_items)
+    html = render_home(items, ytd_items, source_status)
+    report_html = render_report(ytd_items, source_status)
     Path(args.output).write_text(html, encoding="utf-8")
-    save_cache(items, source_status)
-    logging.warning("Generated %s with %s items", args.output, len(items))
+    Path(args.report_output).write_text(report_html, encoding="utf-8")
+    save_cache(ytd_items, source_status)
+    logging.warning("Generated %s with %s recent items and %s year-to-date items", args.output, len(items), len(ytd_items))
     return 0
 
 

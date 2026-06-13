@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Prathap KM's Year-to-Date Current Affairs PDF</title>
+  <style>
+    :root {
+      --text: #17202a;
+      --muted: #5e6978;
+      --line: #d8e0ea;
+      --blue: #246bfe;
+      --green: #05815f;
+      --yellow: #d58b00;
+      --red: #ca3f55;
+      --paper: #ffffff;
+      --soft: #f4f7fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--soft);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      padding: 20px 14px 48px;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      color: var(--text);
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button.primary {
+      border-color: transparent;
+      background: var(--blue);
+      color: #ffffff;
+    }
+
+    .cover,
+    .section {
+      margin-bottom: 18px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 9vw, 4.2rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 68ch;
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .fact {
+      min-height: 82px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--green);
+      border-radius: 8px;
+      background: var(--soft);
+    }
+
+    .fact strong {
+      display: block;
+      font-size: 1.35rem;
+    }
+
+    .fact span {
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--line);
+      font-size: 1.4rem;
+    }
+
+    .item {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      break-inside: avoid;
+    }
+
+    .item:last-child {
+      border-bottom: 0;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 7px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .badge {
+      padding: 3px 7px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--soft);
+    }
+
+    h3 {
+      margin: 0 0 7px;
+      font-size: 1.02rem;
+      line-height: 1.32;
+      letter-spacing: 0;
+    }
+
+    .summary {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .source-link {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      word-break: break-word;
+    }
+
+    .empty {
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .note {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 760px) {
+      .page {
+        padding: 28px 22px 64px;
+      }
+
+      .facts {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      .toolbar {
+        display: none;
+      }
+
+      .cover,
+      .section {
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        margin-bottom: 18pt;
+      }
+
+      .cover {
+        min-height: 92vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        page-break-after: always;
+      }
+
+      .section {
+        page-break-before: always;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="toolbar" aria-label="Report actions">
+      <strong>Year-to-date report</strong>
+      <div class="toolbar-actions">
+        <button class="button primary" id="downloadPdf" type="button">Download / Save as PDF</button>
+        <a class="button" href="index.html">Back to directory</a>
+      </div>
+    </nav>
+
+    <section class="cover">
+      <p class="eyebrow">KAS + UPSC current affairs archive</p>
+      <h1>Prathap KM's 2026 Current Affairs Report</h1>
+      <p class="subtitle">Collected from 01 Jan 2026 to 13 Jun 2026, 04:42 PM IST. This printable report is generated from the site's year-to-date archive and grouped by exam section.</p>
+      <div class="facts">
+        <div class="fact">
+          <strong>28</strong>
+          <span>archive items</span>
+        </div>
+        <div class="fact">
+          <strong>6</strong>
+          <span>sections</span>
+        </div>
+        <div class="fact">
+          <strong>01 Jan 2026</strong>
+          <span>start date</span>
+        </div>
+        <div class="fact">
+          <strong>13 Jun 2026</strong>
+          <span>generated date</span>
+        </div>
+      </div>
+      <p class="note">Use the browser print dialog and choose "Save as PDF". This avoids paid services and keeps the site fully static.</p>
+    </section>
+
+    
+    
+    <section class="section">
+      <h2>National (14)</h2>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">GKToday</span>
+          <time class="badge" datetime="2026-06-13T16:41:56.979614+05:30">13 Jun 2026</time>
+        </div>
+        <h3>ओडिशा ने सरकारी संस्थानों में केजी से पीजी तक निःशुल्क शिक्षा देने की घोषणा की</h3>
+        <p class="summary">ओडिशा ने सरकारी संस्थानों में केजी से पीजी तक निःशुल्क शिक्षा देने की घोषणा की</p>
+        <a class="source-link" href="https://www.gktoday.in/hindi/%e0%a4%93%e0%a4%a1%e0%a4%bf%e0%a4%b6%e0%a4%be-%e0%a4%a8%e0%a5%87-%e0%a4%b8%e0%a4%b0%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a5%80-%e0%a4%b8%e0%a4%82%e0%a4%b8%e0%a5%8d%e0%a4%a5%e0%a4%be%e0%a4%a8%e0%a5%8b/">https://www.gktoday.in/hindi/%e0%a4%93%e0%a4%a1%e0%a4%bf%e0%a4%b6%e0%a4%be-%e0%a4%a8%e0%a5%87-%e0%a4%b8%e0%a4%b0%e0%a4%95%e0%a4%be%e0%a4%b0%e0%a5%80-%e0%a4%b8%e0%a4%82%e0%a4%b8%e0%a5%8d%e0%a4%a5%e0%a4%be%e0%a4%a8%e0%a5%8b/</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">GKToday</span>
+          <time class="badge" datetime="2026-06-13T16:41:56.979514+05:30">13 Jun 2026</time>
+        </div>
+        <h3>हैदराबाद में अत्याधुनिक हथियार प्रणाली परिसर का उद्घाटन, स्वदेशी रक्षा क्षमता को मिलेगी मजबूती</h3>
+        <p class="summary">हैदराबाद में अत्याधुनिक हथियार प्रणाली परिसर का उद्घाटन, स्वदेशी रक्षा क्षमता को मिलेगी मजबूती</p>
+        <a class="source-link" href="https://www.gktoday.in/hindi/%e0%a4%b9%e0%a5%88%e0%a4%a6%e0%a4%b0%e0%a4%be%e0%a4%ac%e0%a4%be%e0%a4%a6-%e0%a4%ae%e0%a5%87%e0%a4%82-%e0%a4%85%e0%a4%a4%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%a7%e0%a5%81%e0%a4%a8%e0%a4%bf%e0%a4%95/">https://www.gktoday.in/hindi/%e0%a4%b9%e0%a5%88%e0%a4%a6%e0%a4%b0%e0%a4%be%e0%a4%ac%e0%a4%be%e0%a4%a6-%e0%a4%ae%e0%a5%87%e0%a4%82-%e0%a4%85%e0%a4%a4%e0%a5%8d%e0%a4%af%e0%a4%be%e0%a4%a7%e0%a5%81%e0%a4%a8%e0%a4%bf%e0%a4%95/</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">GKToday</span>
+          <time class="badge" datetime="2026-06-13T16:41:56.979460+05:30">13 Jun 2026</time>
+        </div>
+        <h3>मिशन सुदर्शन चक्र के तहत भारत ने बहु-स्तरीय मिसाइल रक्षा प्रणाली को दी नई गति</h3>
+        <p class="summary">मिशन सुदर्शन चक्र के तहत भारत ने बहु-स्तरीय मिसाइल रक्षा प्रणाली को दी नई गति</p>
+        <a class="source-link" href="https://www.gktoday.in/hindi/%e0%a4%ae%e0%a4%bf%e0%a4%b6%e0%a4%a8-%e0%a4%b8%e0%a5%81%e0%a4%a6%e0%a4%b0%e0%a5%8d%e0%a4%b6%e0%a4%a8-%e0%a4%9a%e0%a4%95%e0%a5%8d%e0%a4%b0-%e0%a4%95%e0%a5%87-%e0%a4%a4%e0%a4%b9%e0%a4%a4-%e0%a4%ad/">https://www.gktoday.in/hindi/%e0%a4%ae%e0%a4%bf%e0%a4%b6%e0%a4%a8-%e0%a4%b8%e0%a5%81%e0%a4%a6%e0%a4%b0%e0%a5%8d%e0%a4%b6%e0%a4%a8-%e0%a4%9a%e0%a4%95%e0%a5%8d%e0%a4%b0-%e0%a4%95%e0%a5%87-%e0%a4%a4%e0%a4%b9%e0%a4%a4-%e0%a4%ad/</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">GKToday</span>
+          <time class="badge" datetime="2026-06-13T16:41:56.979368+05:30">13 Jun 2026</time>
+        </div>
+        <h3>डीआरडीओ ने तीन सफल मिसाइल परीक्षणों के साथ बढ़ाई भारत की रक्षा क्षमता</h3>
+        <p class="summary">डीआरडीओ ने तीन सफल मिसाइल परीक्षणों के साथ बढ़ाई भारत की रक्षा क्षमता</p>
+        <a class="source-link" href="https://www.gktoday.in/hindi/%e0%a4%a1%e0%a5%80%e0%a4%86%e0%a4%b0%e0%a4%a1%e0%a5%80%e0%a4%93-%e0%a4%a8%e0%a5%87-%e0%a4%a4%e0%a5%80%e0%a4%a8-%e0%a4%b8%e0%a4%ab%e0%a4%b2-%e0%a4%ae%e0%a4%bf%e0%a4%b8%e0%a4%be%e0%a4%87%e0%a4%b2/">https://www.gktoday.in/hindi/%e0%a4%a1%e0%a5%80%e0%a4%86%e0%a4%b0%e0%a4%a1%e0%a5%80%e0%a4%93-%e0%a4%a8%e0%a5%87-%e0%a4%a4%e0%a5%80%e0%a4%a8-%e0%a4%b8%e0%a4%ab%e0%a4%b2-%e0%a4%ae%e0%a4%bf%e0%a4%b8%e0%a4%be%e0%a4%87%e0%a4%b2/</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T16:33:18+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Monsoon 2026 LIVE: IMD forecasts thunderstorm in 11 districts of Telangana</h3>
+        <p class="summary">According to the IMD’s latest bulletin, thunderstorms accompanied with lightning and gusty winds are very likely to occur at isolated places in 11 districts of Telangana</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/monsoon-india-rain-weather-tracker-live-updates-imd-forecast-kerala-delhi-tamil-nadu-west-bengal-maharashtra-june-13-2026/article71096436.ece">https://www.thehindu.com/news/national/monsoon-india-rain-weather-tracker-live-updates-imd-forecast-kerala-delhi-tamil-nadu-west-bengal-maharashtra-june-13-2026/article71096436.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T16:28:21+05:30">13 Jun 2026</time>
+        </div>
+        <h3>22nd P. Kesavadev Literary Award for Subhash Chandran</h3>
+        <p class="summary">Kesavadev Diabscreen Kerala Award will be presented to Thankam Subramonian</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/kerala/22nd-p-kesavadev-literary-award-for-subhash-chandran/article71097377.ece">https://www.thehindu.com/news/national/kerala/22nd-p-kesavadev-literary-award-for-subhash-chandran/article71097377.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T16:27:15+05:30">13 Jun 2026</time>
+        </div>
+        <h3>J&K CM's advisor calls for revival of panel to oversee Kashmiri Pandits' return, rehabilitation</h3>
+        <p class="summary">The body comprised government representatives and members of several Kashmiri Pandit organisations</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/jammu-and-kashmir/jk-cms-advisor-calls-for-revival-of-panel-to-oversee-kashmiri-pandits-return-rehabilitation/article71097406.ece">https://www.thehindu.com/news/national/jammu-and-kashmir/jk-cms-advisor-calls-for-revival-of-panel-to-oversee-kashmiri-pandits-return-rehabilitation/article71097406.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T16:13:48+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Hyderabad office-goers lose 312 hours a year in traffic, says report</h3>
+        <p class="summary">Hyderabad office-goers lose 312 hours a year in traffic, says report</p>
+        <a class="source-link" href="https://www.thehindu.com/news/cities/Hyderabad/hyderabad-office-goers-lose-312-hours-a-year-in-traffic-says-report/article71097007.ece">https://www.thehindu.com/news/cities/Hyderabad/hyderabad-office-goers-lose-312-hours-a-year-in-traffic-says-report/article71097007.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">GKToday</span>
+          <time class="badge" datetime="2026-06-13T14:43:39.844205+05:30">13 Jun 2026</time>
+        </div>
+        <h3>महाराष्ट्र महिला किसान सशक्तिकरण विधेयक 2026 से महिलाओं को मिलेगी स्वतंत्र किसान पहचान</h3>
+        <p class="summary">महाराष्ट्र महिला किसान सशक्तिकरण विधेयक 2026 से महिलाओं को मिलेगी स्वतंत्र किसान पहचान</p>
+        <a class="source-link" href="https://www.gktoday.in/hindi/%e0%a4%ae%e0%a4%b9%e0%a4%be%e0%a4%b0%e0%a4%be%e0%a4%b7%e0%a5%8d%e0%a4%9f%e0%a5%8d%e0%a4%b0-%e0%a4%ae%e0%a4%b9%e0%a4%bf%e0%a4%b2%e0%a4%be-%e0%a4%95%e0%a4%bf%e0%a4%b8%e0%a4%be%e0%a4%a8-%e0%a4%b8/">https://www.gktoday.in/hindi/%e0%a4%ae%e0%a4%b9%e0%a4%be%e0%a4%b0%e0%a4%be%e0%a4%b7%e0%a5%8d%e0%a4%9f%e0%a5%8d%e0%a4%b0-%e0%a4%ae%e0%a4%b9%e0%a4%bf%e0%a4%b2%e0%a4%be-%e0%a4%95%e0%a4%bf%e0%a4%b8%e0%a4%be%e0%a4%a8-%e0%a4%b8/</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T14:39:11+05:30">13 Jun 2026</time>
+        </div>
+        <h3>DRDO demonstrates advanced missile defence, anti-ship strike capabilities in three successful flight tests</h3>
+        <p class="summary">It further mentioned that the multi-layered BMD capability was successfully demonstrated with interceptor missiles engaging and destroying their designated targets.</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/drdo-demonstrates-advanced-missile-defence-anti-ship-strike-capabilities-in-three-successful-flight-tests/article71096810.ece">https://www.thehindu.com/news/national/drdo-demonstrates-advanced-missile-defence-anti-ship-strike-capabilities-in-three-successful-flight-tests/article71096810.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T14:35:31+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Production of reserved handloom items in powerlooms to invite penalties</h3>
+        <p class="summary">Eleven categories of products, including cotton and silk sarees with border designs, dhotis, towels, lungis, bed sheets, dress materials, jamakkalams, blankets, shawls, and woollen tweeds, have been reserved exclusively for handloom...</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/tamil-nadu/production-of-reservedhandloomitemsin-powerlooms-to-invite-penalties/article71097044.ece">https://www.thehindu.com/news/national/tamil-nadu/production-of-reservedhandloomitemsin-powerlooms-to-invite-penalties/article71097044.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T14:32:44+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Kerala’s fiscal status report: Its politics and economics</h3>
+        <p class="summary">The report places considerable emphasis on Kerala’s outstanding liabilities. But the rising debt was largely a product of the Covid-19 pandemic, when the State made full use of the higher borrowing limit allowed by the Union</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/kerala/keralas-fiscal-status-report-its-politics-and-economics/article71097112.ece">https://www.thehindu.com/news/national/kerala/keralas-fiscal-status-report-its-politics-and-economics/article71097112.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T14:15:05+05:30">13 Jun 2026</time>
+        </div>
+        <h3>West Bengal CM Adhikari holds Janata Darbar, listens to people’s grievances</h3>
+        <p class="summary">The first 'janata darbar' was held on May 18. Mr. Adhikari had announced the weekly programme after taking charge as Chief Minister, saying citizens would be able to meet him directly every week</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/west-bengal/west-bengal-cm-suvendu-adhikari-janata-darbar-on-june-13-2026/article71097066.ece">https://www.thehindu.com/news/national/west-bengal/west-bengal-cm-suvendu-adhikari-janata-darbar-on-june-13-2026/article71097066.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T14:05:00+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Salem man arrested for sexually assaulting woman; police recover obscene clips from his phone</h3>
+        <p class="summary">An audio clip went viral on social media platforms, in which a woman alleged that M. Manikandan, 40, had sexually assaulted her, recorded the act on his mobile phone, and threatened to release the video online</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/tamil-nadu/salem-man-arrested-for-sexually-assaulting-woman-police-recover-obscene-clips-from-his-phone/article71096986.ece">https://www.thehindu.com/news/national/tamil-nadu/salem-man-arrested-for-sexually-assaulting-woman-police-recover-obscene-clips-from-his-phone/article71096986.ece</a>
+      </article>
+      
+    </section>
+    
+    
+    <section class="section">
+      <h2>Karnataka/State (0)</h2>
+      
+      <p class="empty">No archived items in this section yet.</p>
+      
+    </section>
+    
+    
+    <section class="section">
+      <h2>Economy (0)</h2>
+      
+      <p class="empty">No archived items in this section yet.</p>
+      
+    </section>
+    
+    
+    <section class="section">
+      <h2>Science & Tech (14)</h2>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T16:35:26+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Stand-up comedians who cross limits need to be taught lesson: Sena MLC to bring motion in House</h3>
+        <p class="summary">"A lesson should be taught to such stand-up comedians. They are crossing all limits and making fun of anyone. They say whatever they want. I will introduce a motion in the upcoming monsoon session against such acts," says Shiv Sena leader</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/maharashtra/stand-up-comedians-who-cross-limits-need-to-be-taught-lesson-sena-mlc-to-bring-motion-in-house/article71097425.ece">https://www.thehindu.com/news/national/maharashtra/stand-up-comedians-who-cross-limits-need-to-be-taught-lesson-sena-mlc-to-bring-motion-in-house/article71097425.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T16:31:54+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Minister Narayana reviews bridge construction across Kondaveeti Vagu and Palavagu in Amaravati</h3>
+        <p class="summary">We are constructing 69 bridges across Kondaveeti Vagu and Palavagu. Efforts are being made to ensure that rainwater flows without obstruction and that no area in Amaravati experiences water stagnation during the rainy season, Mr....</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/andhra-pradesh/minister-narayana-reviews-bridge-construction-across-kondaveeti-vagu-and-palavagu-in-amaravati/article71097383.ece">https://www.thehindu.com/news/national/andhra-pradesh/minister-narayana-reviews-bridge-construction-across-kondaveeti-vagu-and-palavagu-in-amaravati/article71097383.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T16:30:24+05:30">13 Jun 2026</time>
+        </div>
+        <h3>ED conducts raids on TMC MLA Madan Mitra's properties to probe municipal recruitment 'scam'</h3>
+        <p class="summary">It is alleged that Mr. Mitra received bribes in the form of cash and gold through middlemen in relation to the appointment of undeserving candidates for various posts to different municipalities, including civic bodies of Kamarhati and...</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/west-bengal/ed-conducts-raids-on-tmc-mla-madan-mitras-properties-to-probe-municipal-recruitment-scam/article71097225.ece">https://www.thehindu.com/news/national/west-bengal/ed-conducts-raids-on-tmc-mla-madan-mitras-properties-to-probe-municipal-recruitment-scam/article71097225.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T16:21:35+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Five IAF personnel killed in AN-32 aircraft crash in Assam's Jorhat</h3>
+        <p class="summary">A court of inquiry is being constituted to ascertain the cause of the accident, the IAF says</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/assam/iaf-aircraft-an-32-crashes-while-landing-in-assams-jorhat/article71096781.ece">https://www.thehindu.com/news/national/assam/iaf-aircraft-an-32-crashes-while-landing-in-assams-jorhat/article71096781.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T16:17:34+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Vision 2031: Kerala to be made most women-friendly State; task force to investigate crime against children</h3>
+        <p class="summary">Document moots new legislation on the lines of Disha Act in Andhra Pradesh to prevent crime against women</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/kerala/vision-2031-kerala-to-be-made-most-women-friendly-state-task-force-to-investigate-crime-against-children/article71097298.ece">https://www.thehindu.com/news/national/kerala/vision-2031-kerala-to-be-made-most-women-friendly-state-task-force-to-investigate-crime-against-children/article71097298.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T16:14:01+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Telangana DCA seizes ₹70.56 lakh worth pharmaceutical excipients in Hyderabad over label tampering</h3>
+        <p class="summary">During the inspection, officials found 12 cardboard drums containing 240 kg of Hydroxypropyl Betadex</p>
+        <a class="source-link" href="https://www.thehindu.com/news/cities/Hyderabad/telangana-dca-seizes-7056-lakh-worth-pharmaceutical-excipients-in-hyderabad-over-label-tampering/article71097001.ece">https://www.thehindu.com/news/cities/Hyderabad/telangana-dca-seizes-7056-lakh-worth-pharmaceutical-excipients-in-hyderabad-over-label-tampering/article71097001.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T16:11:57+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Seven Bangladeshi nationals to be deported from Hyderabad</h3>
+        <p class="summary">The detainees are being shifted to the Deportation Centre at Jogipet in Medak district.</p>
+        <a class="source-link" href="https://www.thehindu.com/news/cities/Hyderabad/seven-bangladeshi-nationals-to-be-deported-from-hyderabad/article71097013.ece">https://www.thehindu.com/news/cities/Hyderabad/seven-bangladeshi-nationals-to-be-deported-from-hyderabad/article71097013.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T14:20:33+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Monsoon 2026 LIVE: Centre suspends Cell Broadcasting Services, a mobile-based disaster warning system</h3>
+        <p class="summary">Cell Broadcast Service is being kept on hold until further instructions due to certain issues flagged by the competent authorities, reads an order by National Disaster Management Authority (NDMA)</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/monsoon-india-rain-weather-tracker-live-updates-imd-forecast-kerala-delhi-tamil-nadu-west-bengal-maharashtra-june-13-2026/article71096436.ece">https://www.thehindu.com/news/national/monsoon-india-rain-weather-tracker-live-updates-imd-forecast-kerala-delhi-tamil-nadu-west-bengal-maharashtra-june-13-2026/article71096436.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T14:14:28+05:30">13 Jun 2026</time>
+        </div>
+        <h3>2020 Delhi riots: Sharjeel Imam, Umar Khalid move fresh bail pleas in ‘larger conspiracy’ case</h3>
+        <p class="summary">The applications argued that there has been no significant progress in the trial despite the Supreme Court dismissing the earlier plea over six months ago</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/2020-delhi-riots-sharjeel-imam-umar-khalid-move-fresh-bail-pleas-in-larger-conspiracy-case/article71097050.ece">https://www.thehindu.com/news/national/2020-delhi-riots-sharjeel-imam-umar-khalid-move-fresh-bail-pleas-in-larger-conspiracy-case/article71097050.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T14:09:32+05:30">13 Jun 2026</time>
+        </div>
+        <h3>ED complaint leads to UAPA case against those associated with U.S.-based Christian missionary</h3>
+        <p class="summary">The FIR was registered based on a complaint submitted by Sunil Kumar Sinhmar, an officer of the Directorate of Enforcement</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/karnataka/ed-complaint-leads-to-uapa-case-against-those-associated-with-us-based-christian-missionary/article71096583.ece">https://www.thehindu.com/news/national/karnataka/ed-complaint-leads-to-uapa-case-against-those-associated-with-us-based-christian-missionary/article71096583.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T14:06:51+05:30">13 Jun 2026</time>
+        </div>
+        <h3>DMK government failed to strengthen power infrastructure: Minister Sengottaiyan</h3>
+        <p class="summary">DMK government failed to strengthen power infrastructure: Minister Sengottaiyan</p>
+        <a class="source-link" href="https://www.thehindu.com/news/cities/Coimbatore/dmk-government-failed-to-strengthen-power-infrastructure-says-sengottaiyan/article71094637.ece">https://www.thehindu.com/news/cities/Coimbatore/dmk-government-failed-to-strengthen-power-infrastructure-says-sengottaiyan/article71094637.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T14:01:09+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Police serve fresh summons to Bengal's ex-sports minister in Messi event chaos case</h3>
+        <p class="summary">The case stems from an FIR lodged against him by the event organiser Shatadru Dutta, accusing the former Minister of black-marketing tickets, extortion, criminal intimidation and cheating in connection with the high-profile football...</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/west-bengal/police-serve-fresh-summons-to-bengals-ex-sports-minister-in-messi-event-chaos-case/article71097024.ece">https://www.thehindu.com/news/national/west-bengal/police-serve-fresh-summons-to-bengals-ex-sports-minister-in-messi-event-chaos-case/article71097024.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T13:58:22+05:30">13 Jun 2026</time>
+        </div>
+        <h3>President Murmu reviews IMA passing out parade, hails induction of women cadets as historic milestone</h3>
+        <p class="summary">515 officer cadets commissioned, including 34 from 16 friendly nations; President calls for adaptive and ethical military leadership</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/president-murmu-reviews-ima-passing-out-parade-hails-induction-of-women-cadets-as-historic-milestone/article71096873.ece">https://www.thehindu.com/news/national/president-murmu-reviews-ima-passing-out-parade-hails-induction-of-women-cadets-as-historic-milestone/article71096873.ece</a>
+      </article>
+      
+      <article class="item">
+        <div class="meta">
+          <span class="badge">The Hindu</span>
+          <time class="badge" datetime="2026-06-13T13:41:16+05:30">13 Jun 2026</time>
+        </div>
+        <h3>Bihar encounter: Man killed, two police personnel injured</h3>
+        <p class="summary">“The injured policemen are undergoing treatment at Patna AIIMS, and their condition was stated to be out of danger,” an officer said</p>
+        <a class="source-link" href="https://www.thehindu.com/news/national/bihar/bihar-encounter-man-killed-two-police-personnel-injured/article71096943.ece">https://www.thehindu.com/news/national/bihar/bihar-encounter-man-killed-two-police-personnel-injured/article71096943.ece</a>
+      </article>
+      
+    </section>
+    
+    
+    <section class="section">
+      <h2>Environment (0)</h2>
+      
+      <p class="empty">No archived items in this section yet.</p>
+      
+    </section>
+    
+    
+    <section class="section">
+      <h2>International (0)</h2>
+      
+      <p class="empty">No archived items in this section yet.</p>
+      
+    </section>
+    
+  </main>
+
+  <script>
+    document.getElementById("downloadPdf").addEventListener("click", () => {
+      window.print();
+    });
+  </script>
+</body>
+</html>

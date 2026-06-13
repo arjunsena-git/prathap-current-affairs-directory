@@ -535,6 +535,7 @@
         <p class="subhead">A colorful seven-day reading board that refreshes through the day, bringing the news into the page first with source links ready when he wants to go deeper.</p>
         <div class="hero-actions" aria-label="Page actions">
           <button class="action primary" id="refreshPage" type="button">Reload latest published</button>
+          <a class="action" href="year-to-date.html">Year-to-date PDF</a>
           <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle dark mode">Dark</button>
           <a class="action" href="#source-status">Sources</a>
         </div>
@@ -550,8 +551,8 @@
           <span>days visible</span>
         </div>
         <div class="stat yellow">
-          <strong>{{ categories|length }}</strong>
-          <span>exam sections</span>
+          <strong>{{ ytd_count }}</strong>
+          <span>year-to-date archive cards</span>
         </div>
         <div class="stat red">
           <strong>{{ last_updated_label.split(',')[0] }}</strong>
