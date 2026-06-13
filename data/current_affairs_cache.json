@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-13T13:56:48.694193+05:30",
+  "last_updated": "2026-06-13T14:05:43.445105+05:30",
   "items": [
     {
       "id": "aee655773d856fb0",
@@ -7,7 +7,7 @@
       "summary": "महाराष्ट्र महिला किसान सशक्तिकरण विधेयक 2026 से महिलाओं को मिलेगी स्वतंत्र किसान पहचान",
       "source": "GKToday",
       "link": "https://www.gktoday.in/hindi/%e0%a4%ae%e0%a4%b9%e0%a4%be%e0%a4%b0%e0%a4%be%e0%a4%b7%e0%a5%8d%e0%a4%9f%e0%a5%8d%e0%a4%b0-%e0%a4%ae%e0%a4%b9%e0%a4%bf%e0%a4%b2%e0%a4%be-%e0%a4%95%e0%a4%bf%e0%a4%b8%e0%a4%be%e0%a4%a8-%e0%a4%b8/",
-      "date": "2026-06-13T13:56:22.287566+05:30",
+      "date": "2026-06-13T14:05:15.295568+05:30",
       "date_label": "13 Jun 2026",
       "category": "National",
       "unavailable": false
@@ -156,7 +156,7 @@
       "ok": false,
       "count": 0,
       "url": "https://ddnews.gov.in/rss",
-      "error": "HTTPSConnectionPool(host='ddnews.gov.in', port=443): Read timed out. (read timeout=12)"
+      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     "The Hindu": {
       "ok": true,
@@ -175,10 +175,9 @@
       "error": "HTTPSConnectionPool(host='kpsc.kar.nic.in', port=443): Read timed out."
     },
     "Karnataka DIPR": {
-      "ok": false,
+      "ok": true,
       "count": 0,
-      "url": "https://karnatakavarthe.org/en/",
-      "error": "404 Client Error: Not Found for url: https://karnatakavarthe.org/en/"
+      "url": "https://karnatakavarthe.org/en/"
     }
   }
 }
