@@ -148,6 +148,25 @@
       font-size: 1.4rem;
     }
 
+    .handbook-intro {
+      margin: 16px 0 0;
+      padding: 14px;
+      border-left: 5px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      background: var(--soft);
+    }
+
+    .handbook-intro h2 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .handbook-intro ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
     .item {
       padding: 12px 0;
       border-bottom: 1px solid var(--line);
@@ -175,16 +194,27 @@
       background: var(--soft);
     }
 
-    h3 {
+    .note-title {
       margin: 0 0 7px;
       font-size: 1.02rem;
       line-height: 1.32;
       letter-spacing: 0;
     }
 
-    .summary {
-      margin: 0;
+    .remember {
+      margin: 0 0 8px;
       color: var(--text);
+      font-size: 1rem;
+      font-weight: 760;
+    }
+
+    .exam-hook {
+      margin: 0;
+      padding: 9px 10px;
+      border-radius: 8px;
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 0.9rem;
     }
 
     .source-link {
@@ -288,6 +318,14 @@
           <span>generated date</span>
         </div>
       </div>
+      <div class="handbook-intro">
+        <h2>How to read this handbook</h2>
+        <ul>
+          <li>Read the bold note as the one-line current affairs takeaway.</li>
+          <li>Use the exam hook to decide where it fits in KAS/UPSC notes.</li>
+          <li>Source names are kept for verification; raw links are placed quietly below each note.</li>
+        </ul>
+      </div>
       <p class="note">Use the browser print dialog and choose "Save as PDF". This avoids paid services and keeps the site fully static.</p>
     </section>
 
@@ -301,9 +339,9 @@
           <span class="badge">{{ item.source }}</span>
           <time class="badge" datetime="{{ item.date }}">{{ item.date_label }}</time>
         </div>
-        <h3>{{ item.title }}</h3>
-        <p class="summary">{{ item.summary }}</p>
-        <a class="source-link" href="{{ item.link }}">{{ item.link }}</a>
+        <p class="remember">{{ item.handbook_note }}</p>
+        <p class="exam-hook">Exam hook: {{ item.exam_hook }}</p>
+        <a class="source-link" href="{{ item.link }}">Reference source</a>
       </article>
       {% else %}
       <p class="empty">No archived items in this section yet.</p>

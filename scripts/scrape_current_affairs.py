@@ -125,6 +125,15 @@ CATEGORY_KEYWORDS = {
     ],
 }
 
+EXAM_HOOKS = {
+    "National": "Link with polity, governance, schemes, social justice, internal security, and GS-II/essay examples.",
+    "Karnataka/State": "Use for KAS state-specific notes: Karnataka administration, society, economy, geography, and local governance.",
+    "Economy": "Revise with growth, fiscal policy, monetary policy, banking, taxation, trade, and inclusive development.",
+    "Science & Tech": "Connect with applications, institutions, missions, risks, ethics, and prelims-ready technical terms.",
+    "Environment": "Map to climate, biodiversity, conservation, disasters, pollution, and sustainable development.",
+    "International": "Use for IR notes: India's interests, bilateral relations, groupings, global institutions, and diaspora.",
+}
+
 
 def now_ist() -> datetime:
     return datetime.now(IST)
@@ -159,6 +168,28 @@ def summarize(text: str, fallback: str) -> str:
         return cleaned
     truncated = cleaned[:237].rsplit(" ", 1)[0]
     return f"{truncated}..."
+
+
+def strip_trailing_fragment(text: str) -> str:
+    text = normalize_text(text)
+    text = re.sub(r"\s*\.\.\.$", "", text)
+    parts = re.split(r"(?<=[.!?])\s+", text)
+    if len(parts) > 1 and not re.search(r"[.!?]$", parts[-1]):
+        text = " ".join(parts[:-1])
+    return text.strip()
+
+
+def concise_note(title: str, summary: str, limit: int = 210) -> str:
+    title = strip_trailing_fragment(title)
+    summary = strip_trailing_fragment(summary)
+    if not summary or title_key(summary) == title_key(title) or title_key(summary).startswith(title_key(title)):
+        note = title
+    else:
+        note = f"{title}: {summary}"
+    if len(note) <= limit:
+        return note
+    trimmed = note[: limit - 1].rsplit(" ", 1)[0].rstrip(",:;")
+    return f"{trimmed}."
 
 
 def categorize(title: str, summary: str, default: str) -> str:
@@ -335,6 +366,8 @@ def make_item(source: Source, title: str, link: str, summary: str, date: datetim
         "id": item_id(title, link),
         "title": title,
         "summary": summary,
+        "handbook_note": concise_note(title, summary),
+        "exam_hook": EXAM_HOOKS.get(category, EXAM_HOOKS["National"]),
         "source": source.name,
         "link": link,
         "date": date.isoformat(),
@@ -424,12 +457,19 @@ def merge_archive(existing: list[dict[str, Any]], incoming: list[dict[str, Any]]
         key = title_key(item.get("title", "")) or item.get("link", "")
         if not key:
             continue
-        current = dict(item)
+        current = enrich_item(dict(item))
         if key in merged and merged[key].get("unavailable") and not current.get("unavailable"):
             merged[key] = current
         else:
             merged.setdefault(key, current)
     return dedupe_since(list(merged.values()), year_start(), keep_unavailable=False)
+
+
+def enrich_item(item: dict[str, Any]) -> dict[str, Any]:
+    category = item.get("category", "National")
+    item["handbook_note"] = concise_note(item.get("title", ""), item.get("summary", ""))
+    item["exam_hook"] = EXAM_HOOKS.get(category, EXAM_HOOKS["National"])
+    return item
 
 
 def group_items(items: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
