@@ -1,6 +1,71 @@
 {
-  "last_updated": "2026-08-19T07:31:29.720702+05:30",
+  "last_updated": "2026-08-19T08:55:36.587355+05:30",
   "items": [
+    {
+      "id": "fe4dae59b3ee51a5",
+      "title": "U.S. Ambassador Sergio Gor to visit Kashmir, meet Omar Abdullah",
+      "summary": "The U.S. Ambassador to India and Special Envoy to South and Central Asia is expected to arrive in Srinagar on August 19 and meet Chief Minister Omar Abdullah, with a visit to Ladakh also likely",
+      "handbook_note": "U.S.: The U.S.",
+      "exam_hook": "Link with polity, governance, schemes, social justice, internal security, and GS-II/essay examples.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/jammu-and-kashmir/us-ambassador-sergio-gor-to-visit-kashmir-meet-omar-abdullah/article71360482.ece",
+      "date": "2026-08-19T08:36:20+05:30",
+      "date_label": "19 Aug 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "aa7d0ef61c3d6a26",
+      "title": "Massive Kolkata hotel fire kills 9, several injured",
+      "summary": "The blaze erupted around 2 a.m.; at least 15 others were rescued from the hotel",
+      "handbook_note": "Massive Kolkata hotel fire kills 9, several injured: The blaze erupted around 2 a.m.; at least 15 others were rescued from the hotel",
+      "exam_hook": "Link with polity, governance, schemes, social justice, internal security, and GS-II/essay examples.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/cities/kolkata/kolkata-hotel-fire-deaths-bangladesh-nationals-august-19-2026/article71363189.ece",
+      "date": "2026-08-19T08:35:39+05:30",
+      "date_label": "19 Aug 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "7dd1872a30958f02",
+      "title": "Jharkhand Government releases list of 44 recruitment exams cancelled due to irregularities",
+      "summary": "The cancelled exams include recruitment for drug inspectors, assistant professors, deputy collectors, dental doctors, assistant engineers, civil judges, and additional public prosecutors, among others",
+      "handbook_note": "Jharkhand Government releases list of 44 recruitment exams cancelled due to irregularities: The cancelled exams include recruitment for drug inspectors, assistant professors, deputy collectors, dental.",
+      "exam_hook": "Link with polity, governance, schemes, social justice, internal security, and GS-II/essay examples.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/jharkhand/jharkhand-government-releases-list-of-recruitment-exams-cancelled-due-to-irregularities/article71362249.ece",
+      "date": "2026-08-19T08:27:13+05:30",
+      "date_label": "19 Aug 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "9c6a1f26be40fe6d",
+      "title": "Goa moves Supreme Court to enhance sentence of Tarun Tejpal in 2013 rape case",
+      "summary": "The State said the sentence was inadequate but clarified that it did not want to challenge or reopen the findings or conclusions on merit recorded by the Bombay High Court in a judgment on August 6",
+      "handbook_note": "Goa moves Supreme Court to enhance sentence of Tarun Tejpal in 2013 rape case: The State said the sentence was inadequate but clarified that it did not want to challenge or reopen the findings or conclusions.",
+      "exam_hook": "Connect with applications, institutions, missions, risks, ethics, and prelims-ready technical terms.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/goa-moves-supreme-court-to-enhance-sentence-of-tarun-tejpal-in-2013-rape-case/article71362029.ece",
+      "date": "2026-08-19T08:25:07+05:30",
+      "date_label": "19 Aug 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
+    {
+      "id": "4b27e0c21312f100",
+      "title": "How a horoscope notebook and PIN Code exposed a Tamil Nadu judge’s false claim at Supreme Court",
+      "summary": "In 1993, Munsif-cum-Judicial Magistrate M. Manickam submitted a representation to the Chief Judicial Magistrate, Kanniyakumari, seeking to change his date of birth from March 19, 1947 to November 24, 1950.",
+      "handbook_note": "How a horoscope notebook and PIN Code exposed a Tamil Nadu judge’s false claim at Supreme Court: In 1993, Munsif-cum-Judicial Magistrate M. Manickam submitted a representation to the Chief Judicial.",
+      "exam_hook": "Connect with applications, institutions, missions, risks, ethics, and prelims-ready technical terms.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/tamil-nadu/how-a-horoscope-notebook-and-pin-code-exposed-a-tamil-nadu-judges-false-claim-at-supreme-court/article71359255.ece",
+      "date": "2026-08-19T07:17:29+05:30",
+      "date_label": "19 Aug 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
     {
       "id": "d7d1da24ab0905b5",
       "title": "Delhi Chief Fire Officer interview: ‘We need more than 12,000 firefighters but have only about 2,500’",
