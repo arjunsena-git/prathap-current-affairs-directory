@@ -1,6 +1,58 @@
 {
-  "last_updated": "2026-08-23T07:39:58.378471+05:30",
+  "last_updated": "2026-08-23T08:59:41.031165+05:30",
   "items": [
+    {
+      "id": "aceac610d7a76c0a",
+      "title": "News in Frames | Toxic water runs deep",
+      "summary": "Unchecked industrial waste pileup has affected at least three villages in Uttar Pradesh, where yellow-coloured groundwater and patches of yellow-green topsoil — indicators of chromium contamination — have been reported in several areas",
+      "handbook_note": "News in Frames | Toxic water runs deep: Unchecked industrial waste pileup has affected at least three villages in Uttar Pradesh, where yellow-coloured groundwater and patches of yellow-green topsoil —.",
+      "exam_hook": "Link with polity, governance, schemes, social justice, internal security, and GS-II/essay examples.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/uttar-pradesh/news-in-frames-toxic-water-runs-deep/article71380059.ece",
+      "date": "2026-08-23T08:30:59+05:30",
+      "date_label": "23 Aug 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "8848d95f16708479",
+      "title": "Be loud, be proud, fight for your space, Rahul Gandhi tells Gen Z girls",
+      "summary": "Terming violence, disrespect, control and time as measures of exerting control over women, he cited statistics to illustrate their impact on women’s freedom and participation",
+      "handbook_note": "Be loud, be proud, fight for your space, Rahul Gandhi tells Gen Z girls: Terming violence, disrespect, control and time as measures of exerting control over women, he cited statistics to illustrate their.",
+      "exam_hook": "Connect with applications, institutions, missions, risks, ethics, and prelims-ready technical terms.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/be-loud-be-proud-fight-for-your-space-rahul-gandhi-tells-gen-z-girls/article71378591.ece",
+      "date": "2026-08-23T08:20:48+05:30",
+      "date_label": "23 Aug 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
+    {
+      "id": "eb70575ae253398b",
+      "title": "Transshipment scam or efficient supply chain? How U.S. firms turn it into profit?",
+      "summary": "Data and industry sources reveal little Chinese ownership of such pumps/components sent to the U.S. by Indian/India-based companies",
+      "handbook_note": "Transshipment scam or efficient supply chain? How U.S. firms turn it into profit?: Data and industry sources reveal little Chinese ownership of such pumps/components sent to the U.S.",
+      "exam_hook": "Connect with applications, institutions, missions, risks, ethics, and prelims-ready technical terms.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/business/transshipment-scam-or-efficient-supply-chain-how-us-firms-turn-it-into-profit/article71374582.ece",
+      "date": "2026-08-23T08:17:03+05:30",
+      "date_label": "23 Aug 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
+    {
+      "id": "a5f6e756b8c99172",
+      "title": "FIR registered against Abhijeet Dipke for 'entering government school without permission, threatening teachers'",
+      "summary": "CJP founder Abhijeet Dipke has been visiting schools in central Maharashtra's Latur district and highlighting their problems as part of the CJP's ongoing 'School Thik Karo' campaign",
+      "handbook_note": "FIR registered against Abhijeet Dipke for 'entering government school without permission, threatening teachers': CJP founder Abhijeet Dipke has been visiting schools in central Maharashtra's Latur district.",
+      "exam_hook": "Connect with applications, institutions, missions, risks, ethics, and prelims-ready technical terms.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/fir-registered-against-abhijeet-dipke-for-entering-government-school-without-permission-threatening-teachers/article71378705.ece",
+      "date": "2026-08-23T08:13:49+05:30",
+      "date_label": "23 Aug 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
     {
       "id": "39a542a942d587d7",
       "title": "Visit families affected by Ken-Betwa project, hear their grievances: M.P. CM tells officials",
