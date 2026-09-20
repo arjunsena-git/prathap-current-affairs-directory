@@ -1,6 +1,162 @@
 {
-  "last_updated": "2026-09-20T21:53:19.726110+05:30",
+  "last_updated": "2026-09-21T00:28:34.839919+05:30",
   "items": [
+    {
+      "id": "66bc5e0c6a9a3edb",
+      "title": "Dengue cases in Tamil Nadu decline for third consecutive year as per government data",
+      "summary": "The State recorded 17,049 cases and nine deaths in 2026 up to September 19",
+      "handbook_note": "Dengue cases in Tamil Nadu decline for third consecutive year as per government data: The State recorded 17,049 cases and nine deaths in 2026 up to September 19",
+      "exam_hook": "Link with polity, governance, schemes, social justice, internal security, and GS-II/essay examples.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/sci-tech/health/dengue-cases-in-tamil-nadu-decline-for-third-consecutive-year-as-per-government-data/article71487571.ece",
+      "date": "2026-09-21T00:20:54+05:30",
+      "date_label": "21 Sep 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "3d8f9e4a5e440e56",
+      "title": "3 dead, three missing in Nilambur flash flood",
+      "summary": "3 dead, three missing in Nilambur flash flood",
+      "handbook_note": "3 dead, three missing in Nilambur flash flood",
+      "exam_hook": "Link with polity, governance, schemes, social justice, internal security, and GS-II/essay examples.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/kerala/one-dead-four-missing-in-nilambur-flash-floods/article71488413.ece",
+      "date": "2026-09-21T00:18:24+05:30",
+      "date_label": "21 Sep 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "7c6d4053198532cc",
+      "title": "Experts discuss specific diagnosis and brain modulation in Alzheimer’s care",
+      "summary": "Experts discuss the importance of accurate diagnosis and the potential of non-invasive brain stimulation in dementia care",
+      "handbook_note": "Experts discuss specific diagnosis and brain modulation in Alzheimer’s care: Experts discuss the importance of accurate diagnosis and the potential of non-invasive brain stimulation in dementia care",
+      "exam_hook": "Connect with applications, institutions, missions, risks, ethics, and prelims-ready technical terms.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/sci-tech/health/experts-discuss-specific-diagnosis-and-brain-modulation-in-alzheimers-care/article71487569.ece",
+      "date": "2026-09-21T00:13:52+05:30",
+      "date_label": "21 Sep 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
+    {
+      "id": "c511ce805b228260",
+      "title": "Village knowledge centre inaugurated in Villupuram district",
+      "summary": "Officials said the Village Knowledge Centre would play a crucial role in enhancing access to education, skills training, and economic opportunities for the local community",
+      "handbook_note": "Village knowledge centre inaugurated in Villupuram district: Officials said the Village Knowledge Centre would play a crucial role in enhancing access to education, skills training, and economic opportunities.",
+      "exam_hook": "Connect with applications, institutions, missions, risks, ethics, and prelims-ready technical terms.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/tamil-nadu/village-knowledge-centre-inaugurated-in-villupuram-district/article71487748.ece",
+      "date": "2026-09-21T00:13:10+05:30",
+      "date_label": "21 Sep 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
+    {
+      "id": "a7d1d126c2a68ee9",
+      "title": "Madurantakam bypolls: PMK’s abstention adds to changing electoral equations",
+      "summary": "The impact of the SIR of electoral rolls on the size of the electorate was relatively limited in Madurantakam, with the electorate declining only marginally, whereas the number of voters increased significantly in 2026 compared with the...",
+      "handbook_note": "Madurantakam bypolls: PMK’s abstention adds to changing electoral equations: The impact of the SIR of electoral rolls on the size of the electorate was relatively limited in Madurantakam, with the electorate.",
+      "exam_hook": "Link with polity, governance, schemes, social justice, internal security, and GS-II/essay examples.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/tamil-nadu/madurantakam-bypolls-pmks-abstention-adds-to-changing-electoral-equations/article71488622.ece",
+      "date": "2026-09-21T00:04:08+05:30",
+      "date_label": "21 Sep 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "a0b9e4cc59bd7baf",
+      "title": "Keralam Chief Minister to launch ₹93.22-crore coastal protection project for Pozhiyoor",
+      "summary": "Project seeks to provide Pozhiyoor with a robust defence against invading waves using a combination of groynes, seawall and tetrapods",
+      "handbook_note": "Keralam Chief Minister to launch ₹93.22-crore coastal protection project for Pozhiyoor: Project seeks to provide Pozhiyoor with a robust defence against invading waves using a combination of groynes, seawall.",
+      "exam_hook": "Connect with applications, institutions, missions, risks, ethics, and prelims-ready technical terms.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/kerala/keralam-chief-minister-to-launch-9322-crore-coastal-protection-project-for-pozhiyoor/article71488317.ece",
+      "date": "2026-09-20T23:56:49+05:30",
+      "date_label": "20 Sep 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
+    {
+      "id": "8348e888cc14b97c",
+      "title": "India’s NGOs at a new funding crossroads",
+      "summary": "India’s non-governmental organisations must navigate shifting foreign and domestic funding sources",
+      "handbook_note": "India’s NGOs at a new funding crossroads: India’s non-governmental organisations must navigate shifting foreign and domestic funding sources",
+      "exam_hook": "Use for IR notes: India's interests, bilateral relations, groupings, global institutions, and diaspora.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/opinion/lead/indias-ngos-at-a-new-funding-crossroads/article71488462.ece",
+      "date": "2026-09-20T23:51:05+05:30",
+      "date_label": "20 Sep 2026",
+      "category": "International",
+      "unavailable": false
+    },
+    {
+      "id": "5520c3b191c831ae",
+      "title": "TVK regime’s experiment, of having two Advisers to Vijay alongside Chief Secretary, giving mixed vibes to T.N.’s bureaucratic circles",
+      "summary": "Apart from the two advisers, the Chief Minister is aided by a team of four IAS officers, one of whom has 30-odd years’ experience",
+      "handbook_note": "TVK regime’s experiment, of having two Advisers to Vijay alongside Chief Secretary, giving mixed vibes to T.N.’s bureaucratic circles: Apart from the two advisers, the Chief Minister is aided by a team of.",
+      "exam_hook": "Connect with applications, institutions, missions, risks, ethics, and prelims-ready technical terms.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/tamil-nadu/tvk-regimes-experiment-of-having-two-advisers-to-vijay-alongside-chief-secretary-giving-mixed-vibes-to-tns-bureaucratic-circles/article71485220.ece",
+      "date": "2026-09-20T23:45:36+05:30",
+      "date_label": "20 Sep 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
+    {
+      "id": "e03f0d40b1343951",
+      "title": "NHAI, Forest Department efforts provide Pichavaram another 25 hectares of mangroves",
+      "summary": "Sources in the NHAI say the plantation was done for 15 square metres of mangroves that were destroyed in Marakkanam during road widening works",
+      "handbook_note": "NHAI, Forest Department efforts provide Pichavaram another 25 hectares of mangroves: Sources in the NHAI say the plantation was done for 15 square metres of mangroves that were destroyed in Marakkanam during.",
+      "exam_hook": "Connect with applications, institutions, missions, risks, ethics, and prelims-ready technical terms.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/cities/chennai/nhai-forest-department-efforts-provide-pichavaram-another-25-hectares-of-mangroves/article71488858.ece",
+      "date": "2026-09-20T23:45:08+05:30",
+      "date_label": "20 Sep 2026",
+      "category": "Science & Tech",
+      "unavailable": false
+    },
+    {
+      "id": "e0b132fb4da4dfe4",
+      "title": "Glitzy Ganesh idol immersions leave behind chaos",
+      "summary": "Glitzy Ganesh idol immersions leave behind chaos",
+      "handbook_note": "Glitzy Ganesh idol immersions leave behind chaos",
+      "exam_hook": "Link with polity, governance, schemes, social justice, internal security, and GS-II/essay examples.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/andhra-pradesh/glitzy-ganesh-idol-immersions-leave-behind-chaos/article71488916.ece",
+      "date": "2026-09-20T23:40:48+05:30",
+      "date_label": "20 Sep 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "2e1cc371df73192a",
+      "title": "Police officer on the run for ‘stealing’ seized tobacco products nabbed from Ernakulam",
+      "summary": "Seven bags of seized banned tobacco products were reportedly stolen from the Sulthan Bathery Police Station in Wayanad",
+      "handbook_note": "Police officer on the run for ‘stealing’ seized tobacco products nabbed from Ernakulam: Seven bags of seized banned tobacco products were reportedly stolen from the Sulthan Bathery Police Station in Wayanad",
+      "exam_hook": "Link with polity, governance, schemes, social justice, internal security, and GS-II/essay examples.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/kerala/police-officer-on-the-run-for-stealing-seized-tobacco-products-nabbed-from-ernakulam/article71487427.ece",
+      "date": "2026-09-20T23:35:08+05:30",
+      "date_label": "20 Sep 2026",
+      "category": "National",
+      "unavailable": false
+    },
+    {
+      "id": "6ce787d797fc00d7",
+      "title": "Devotees celebrate ‘Ganesh utsavam’ at Manginapudi Beach",
+      "summary": "Devotees celebrate ‘Ganesh utsavam’ at Manginapudi Beach",
+      "handbook_note": "Devotees celebrate ‘Ganesh utsavam’ at Manginapudi Beach",
+      "exam_hook": "Link with polity, governance, schemes, social justice, internal security, and GS-II/essay examples.",
+      "source": "The Hindu",
+      "link": "https://www.thehindu.com/news/national/andhra-pradesh/devotees-celebrate-ganesh-utsavam-at-manginapudi-beach/article71488682.ece",
+      "date": "2026-09-20T23:34:51+05:30",
+      "date_label": "20 Sep 2026",
+      "category": "National",
+      "unavailable": false
+    },
     {
       "id": "0cf0eea9c726d78c",
       "title": "Stomach pain leads to discovery of teenager’s pregnancy; man held under POCSO",
@@ -123043,9 +123199,10 @@
       "error": "HTTPSConnectionPool(host='kpsc.kar.nic.in', port=443): Read timed out."
     },
     "Karnataka DIPR": {
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "url": "https://karnatakavarthe.org/en/"
+      "url": "https://karnatakavarthe.org/en/",
+      "error": "404 Client Error: Not Found for url: https://karnatakavarthe.org/en/"
     }
   }
 }
